@@ -1,5 +1,6 @@
 ﻿using DPA.Parcial.DOMAIN.Core.Entities;
 using DPA.Parcial.DOMAIN.Infrastructure.Data;
+using DPA.Parcial.DOMAIN.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,15 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DPA.Parcial.DOMAIN.Infrastructure.Repositories
+namespace DPA.Parcial.DOMAIN.Core.Interfaces
 {
-    public class MechanicRepository
+    public class MechanicRepository : IMechanicRepository
     {
         private readonly Parcial22200555Context _dbContext;
 
         public MechanicRepository(Parcial22200555Context dbContext)
         {
-            _dbContext=dbContext;
+            _dbContext = dbContext;
         }
 
         //Sincrona
